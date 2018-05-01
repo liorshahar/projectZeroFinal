@@ -1,0 +1,114 @@
+New vote was created : Go To Pub 
+New vote was created : Prime Minster 
+New vote was created : Smokers Vote 
+The current count of Go To Pub is: 1 
+yes  :  1 
+no  :  0 
+The current count of Go To Pub is: 2 
+yes  :  1 
+no  :  1 
+The current count of Go To Pub is: 3 
+yes  :  1 
+no  :  2 
+The current count of Go To Pub is: 4 
+yes  :  1 
+no  :  3 
+The current count of Go To Pub is: 5 
+yes  :  1 
+no  :  4 
+The current count of Go To Pub is: 6 
+yes  :  2 
+no  :  4 
+The current count of Go To Pub is: 7 
+yes  :  2 
+no  :  5 
+The current count of Go To Pub is: 8 
+yes  :  2 
+no  :  6 
+The current count of Go To Pub is: 9 
+yes  :  2 
+no  :  7 
+The current count of Go To Pub is: 10 
+yes  :  2 
+no  :  8 
+The current count of Prime Minster is: 1 
+Bibi  :  1 
+Lapid  :  0 
+Buji  :  0 
+The current count of Prime Minster is: 2 
+Bibi  :  1 
+Lapid  :  1 
+Buji  :  0 
+The current count of Prime Minster is: 3 
+Bibi  :  1 
+Lapid  :  1 
+Buji  :  1 
+The current count of Prime Minster is: 4 
+Bibi  :  2 
+Lapid  :  1 
+Buji  :  1 
+The current count of Prime Minster is: 5 
+Bibi  :  2 
+Lapid  :  2 
+Buji  :  1 
+The current count of Prime Minster is: 6 
+Bibi  :  2 
+Lapid  :  2 
+Buji  :  2 
+The current count of Prime Minster is: 7 
+Bibi  :  3 
+Lapid  :  2 
+Buji  :  2 
+The current count of Prime Minster is: 8 
+Bibi  :  3 
+Lapid  :  3 
+Buji  :  2 
+The current count of Prime Minster is: 9 
+Bibi  :  3 
+Lapid  :  3 
+Buji  :  3 
+The current count of Prime Minster is: 10 
+Bibi  :  4 
+Lapid  :  3 
+Buji  :  3 
+MAX VOTE SIZE
+The current count of Smokers Vote is: 1 
+good  :  1 
+bad  :  0 
+The current count of Smokers Vote is: 2 
+good  :  2 
+bad  :  0 
+The current count of Smokers Vote is: 3 
+good  :  2 
+bad  :  1 
+The current count of Go To Pub is: 10 
+yes  :  2 
+no  :  8 
+The current count of Prime Minster is: 10 
+Bibi  :  4 
+Lapid  :  3 
+Buji  :  3 
+The current count of Smokers Vote is: 3 
+good  :  2 
+bad  :  1 
+*****Zeroing the Vote***** 
+The current count of Go To Pub is: 0 
+yes  :  0 
+no  :  0 
+The current count of Prime Minster is: 0 
+Bibi  :  0 
+Lapid  :  0 
+Buji  :  0 
+The current count of Smokers Vote is: 0 
+good  :  0 
+bad  :  0 
+The current count of Go To Pub is: 0 
+yes  :  0 
+no  :  0 
+The current count of Prime Minster is: 0 
+Bibi  :  0 
+Lapid  :  0 
+Buji  :  0 
+The current count of Smokers Vote is: 0 
+good  :  0 
+bad  :  0 
