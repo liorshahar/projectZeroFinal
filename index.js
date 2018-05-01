@@ -19,74 +19,77 @@ function getAllData(votingArray){
     });
 }
 
-// Create Pub Vote object 
-var goToPubSubjects = { yes : 0  , no : 0 };
-var maxVote = 10;
-var goToPub = vote('Go To Pub' , goToPubSubjects , maxVote , logfile);
-votingArray.push(goToPub);
-
-// Create Prime Minister vote object 
-var primeMinisterSubject = {Bibi : 0 , Lapid : 0 , Buji : 0};
-maxVote = 10;
-var primeMinister = vote('Prime Minster' , primeMinisterSubject , maxVote , logfile);
-votingArray.push(primeMinister);
-
-// Create smoke vote object
-var smokers = { good : 0 , bad : 0};
-maxVote = 10;
-var smokersVote = vote('Smokers Vote' , smokers , maxVote , logfile);
-votingArray.push(smokersVote);
-
-
-// Go To Pub run
-
-goToPub.addVote('yes');
-goToPub.addVote('no');
-goToPub.addVote('no');
-goToPub.addVote('no');
-goToPub.addVote('no');
-goToPub.addVote('yes');
-goToPub.addVote('no');
-goToPub.addVote('no');
-goToPub.addVote('no');
-goToPub.addVote('no');
-
-
-// Prime minister run
-
-primeMinister.addVote('Bibi');
-primeMinister.addVote('Lapid');
-primeMinister.addVote('Buji');
-primeMinister.addVote('Bibi');
-primeMinister.addVote('Lapid');
-primeMinister.addVote('Buji');
-primeMinister.addVote('Bibi');
-primeMinister.addVote('Lapid');
-primeMinister.addVote('Buji');
-primeMinister.addVote('Bibi');
-primeMinister.addVote('Bibi');
-
-// smokers vote run
-smokersVote.addVote('good');
-smokersVote.addVote('good');
-smokersVote.addVote('bad');
-
 // Create server with express
 app.get('/' , function(req , res){
+
+    // Create Pub Vote object 
+    var goToPubSubjects = { yes : 0  , no : 0 };
+    var maxVote = 10;
+    var goToPub = vote('Go To Pub' , goToPubSubjects , maxVote , logfile);
+    votingArray.push(goToPub);
+
+    // Create Prime Minister vote object 
+    var primeMinisterSubject = {Bibi : 0 , Lapid : 0 , Buji : 0};
+    maxVote = 10;
+    var primeMinister = vote('Prime Minster' , primeMinisterSubject , maxVote , logfile);
+    votingArray.push(primeMinister);
+
+    // Create smoke vote object
+    var smokers = { good : 0 , bad : 0};
+    maxVote = 10;
+    var smokersVote = vote('Smokers Vote' , smokers , maxVote , logfile);
+    votingArray.push(smokersVote);
+
+
+    // Go To Pub run
+
+    goToPub.addVote('yes');
+    goToPub.addVote('no');
+    goToPub.addVote('no');
+    goToPub.addVote('no');
+    goToPub.addVote('no');
+    goToPub.addVote('yes');
+    goToPub.addVote('no');
+    goToPub.addVote('no');
+    goToPub.addVote('no');
+    goToPub.addVote('no');
+
+
+    // Prime minister run
+
+    primeMinister.addVote('Bibi');
+    primeMinister.addVote('Lapid');
+    primeMinister.addVote('Buji');
+    primeMinister.addVote('Bibi');
+    primeMinister.addVote('Lapid');
+    primeMinister.addVote('Buji');
+    primeMinister.addVote('Bibi');
+    primeMinister.addVote('Lapid');
+    primeMinister.addVote('Buji');
+    primeMinister.addVote('Bibi');
+    primeMinister.addVote('Bibi');
+
+    // smokers vote run
+    smokersVote.addVote('good');
+    smokersVote.addVote('good');
+    smokersVote.addVote('bad');
     var rstream = fs.createReadStream(systemPath.ROOT_DIR + systemPath.TEXT_FILE , {encoding: 'utf8'});
+    
+    getAllData(votingArray);
+
+    // Zero all  object vote
+    console.log('*****Zeroing the Vote*****');
+    logfile.write('*****Zeroing the Vote***** \n');
+    goToPub.zeroVote();
+    primeMinister.zeroVote();
+    smokersVote.zeroVote();
+    getAllData(votingArray);
     rstream.pipe(res);
+
+    logfile.end();
 });
-http.createServer(app).listen(3000);
-console.log('Listening on port 3000');
+http.createServer(app).listen(8080);
+console.log('Listening on port 8080');
 
 
-getAllData(votingArray);
 
-// Zero all  object vote
-console.log('*****Zeroing the Vote*****');
-logfile.write('*****Zeroing the Vote***** \n');
-goToPub.zeroVote();
-primeMinister.zeroVote();
-smokersVote.zeroVote();
-getAllData(votingArray);
-logfile.end();
